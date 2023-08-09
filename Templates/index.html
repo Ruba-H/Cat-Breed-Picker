@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/index.css')}}" />
+
+    <script async src="//jsfiddle.net/davidThomas/wDSbT/2/embed/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css">
+    
+
+   
+
+    <script>
+        $(function(){
+          $(".chosen-select").chosen({ "disable_search": true });//this disables the default search option
+              // $(".chosen-container").hover(function(){
+          $(".chosen-container-sigle").hover(function(){
+            $(this).addClass("chosen-with-drop");
+            $(this).addClass("chosen-container-single");
+            $(".chosen-select").trigger("chosen:open");
+        });
+          });
+    </script>
+    <title>Breed Picker</title>
+</head>
+
+
+    <body>
+        <div class = "firstSec"> 
+            <div class= "center">
+        
+              <form action="/action_page.php">
+                <div class = "firstRow">
+                  <select id="Social Side" name="social" class="chosen-select">
+                    <option value="before" selected hidden>Sociability</option>
+                    <option value="allSocial">All</option>
+                    <option value="shy">Loner</option>
+                    <option value="friendly">Kid/Dog Friendly</option>
+                  </select>
+                
+
+                <select id="size" name="size" class="chosen-select"  title="Size">
+                  <option value="" selected disabled hidden>Size</option>
+                  <option value="allSize">All</option>
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+                </div>
+                <div class = "firstRow">
+                <select id="active" name="active" class="chosen-select" title = "Activity Lvl">
+                  <option value="" selected disabled hidden>Activity Lvl</option>
+                  <option value="allAct" selected>All</option>
+                  <option value="calm">Quiet & Calm</option>
+                  <option value="medium">Regular</option>
+                  <option value="loud">Loud & Active</option>
+                </select>
+            
+           
+                <select id="price" name="price" class="chosen-select">
+                  <option value="" selected disabled hidden>Price</option>
+                  <option value="allPrice" selected>All</option>
+                  <option value="affordable">affordable</option>
+                  <option value="the-middle">in-the-middle</option>
+                  <option value="expensive">expensive</option>
+                </select>
+               <input type="submit" value="search"> 
+              </div> 
+                
+              </form>
+        <!-- <div class = "Dropdown">
+            <button class="choiceBut">Green</button>
+            <button class="choiceBut">Child/Dog Friendly</button>
+            <button class="dropbtn">S</button>
+            <div class="dropdown-content">
+            <button class="choiceBut">Green</button>
+            <button class="choiceBut">Blue</button>
+        </div> -->
+            
+        </div>
+      </div>
+    </body>
+</html>

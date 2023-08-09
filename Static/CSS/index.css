@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  /* Style for the centre grey area */
+  .center{
+  
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: black;
+    opacity: 80%;
+    height: 120px;
+    width: 500px;
+    border-radius: 35px;
+  }
+  
+  .firstSec {
+    /* background-image: url('Picture/carCat.png'); */
+    height: 500px; 
+    -webkit-animation: linear infinite;
+    animation: linear infinite;
+    -webkit-animation-name: run;
+    animation-name: run ;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+  }
+  
+
+
+/*************** styles for the dropdown *********************/
+.chosen-container.chosen-container-single .chosen-single {
+  float: left;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px 5px 12px; /*top right bottom left*/
+  margin: 6px 12px 12px 6px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #121f82;
+  background-color: #fff;
+  border: 2px solid #030267;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.3);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+  
+option[value="before"] {
+  display: none;
+}
+  
+.firstRow{
+  width: 50%;
+  float: left;
+}
+/* ************************************ */
+
+select {
+  width:70%;
+  padding: 30px 30px 30px 40px; /*top right bottom left*/
+  float: left;
+}
