@@ -35,41 +35,50 @@
         <div class = "firstSec"> 
             <div class= "center">
         
-              <form action="/action_page.php">
+              <form action="/" method="POST">
                 <div class = "firstRow">
-                  <select id="Social Side" name="social" class="chosen-select">
+                  <select id="Social Side" name="social" class="chosen-select" title="Social Level">
                     <option value="before" selected hidden>Sociability</option>
-                    <option value="allSocial">All</option>
-                    <option value="shy">Loner</option>
-                    <option value="friendly">Kid/Dog Friendly</option>
+                    <option value="all">All</option>
+                    <option value="1">Loner</option>
+                    <option value="2">Kid/Dog Friendly</option>
                   </select>
                 
 
                 <select id="size" name="size" class="chosen-select"  title="Size">
                   <option value="" selected disabled hidden>Size</option>
-                  <option value="allSize">All</option>
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
+                  <option value="All">All</option>
+                  <option value="S">Small</option>
+                  <option value="M">Medium</option>
+                  <option value="L">Large</option>
                 </select>
                 </div>
                 <div class = "firstRow">
                 <select id="active" name="active" class="chosen-select" title = "Activity Lvl">
                   <option value="" selected disabled hidden>Activity Lvl</option>
-                  <option value="allAct" selected>All</option>
-                  <option value="calm">Quiet & Calm</option>
-                  <option value="medium">Regular</option>
-                  <option value="loud">Loud & Active</option>
+                  <option value="all">All</option>
+                  <option value="1">Calm</option>
+                  <option value="2">Playful</option>
+                  <option value="3">Highly Active</option>
                 </select>
             
            
-                <select id="price" name="price" class="chosen-select">
+                <select id="price" name="price" class="chosen-select" title="Price">
                   <option value="" selected disabled hidden>Price</option>
-                  <option value="allPrice" selected>All</option>
+                  <option value="All">All</option>
                   <option value="affordable">affordable</option>
                   <option value="the-middle">in-the-middle</option>
                   <option value="expensive">expensive</option>
                 </select>
+
+                <select name="vocal" class="chosen-select" title = "Vocal">
+                  <option value="" selected disabled hidden>Vocal Lvl</option>
+                  <option value="All">All</option>
+                  <option value="1">Quiet</option>
+                  <option value="2">Medium</option>
+                  <option value="3">Loud</option>
+                </select>
+
                <input type="submit" value="search"> 
               </div> 
                 
