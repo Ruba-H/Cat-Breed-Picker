@@ -36,61 +36,60 @@
             <div class= "center">
         
               <form action="/" method="POST">
-                <div class = "firstRow">
-                  <select id="Social Side" name="social" class="chosen-select" title="Social Level">
-                    <option value="before" selected hidden>Sociability</option>
-                    <option value="all">All</option>
-                    <option value="1">Loner</option>
-                    <option value="2">Kid/Dog Friendly</option>
+                <div class = "section">
+                  <select id="Social Side" name="fur" class="chosen-select" title="Social Level">
+                    <option value="before" selected hidden>Fur Length</option>
+                    <option value="1">Lean and Elegant</option>
+                    <option value="2">Thick-furred and Stocky</option>
+                    <option value="3">Large and Fluffy</option>
                   </select>
                 
-
                 <select id="size" name="size" class="chosen-select"  title="Size">
                   <option value="" selected disabled hidden>Size</option>
-                  <option value="All">All</option>
-                  <option value="S">Small</option>
+                  <option value="S">Small kitty</option>
                   <option value="M">Medium</option>
-                  <option value="L">Large</option>
+                  <option value="L">Large Boi</option>
                 </select>
                 </div>
-                <div class = "firstRow">
+                <div class = "section">
                 <select id="active" name="active" class="chosen-select" title = "Activity Lvl">
-                  <option value="" selected disabled hidden>Activity Lvl</option>
-                  <option value="all">All</option>
+                  <option value="" selected disabled hidden>Active</option>
                   <option value="1">Calm</option>
                   <option value="2">Playful</option>
                   <option value="3">Highly Active</option>
                 </select>
-            
-           
-                <select id="price" name="price" class="chosen-select" title="Price">
-                  <option value="" selected disabled hidden>Price</option>
-                  <option value="All">All</option>
-                  <option value="affordable">affordable</option>
-                  <option value="the-middle">in-the-middle</option>
-                  <option value="expensive">expensive</option>
-                </select>
 
                 <select name="vocal" class="chosen-select" title = "Vocal">
-                  <option value="" selected disabled hidden>Vocal Lvl</option>
-                  <option value="All">All</option>
+                  <option value="" selected disabled hidden>Vocal</option>
                   <option value="1">Quiet</option>
                   <option value="2">Medium</option>
-                  <option value="3">Loud</option>
+                  <option value="3">Loud and Chatty</option>
                 </select>
 
-               <input type="submit" value="search"> 
+               <input type="submit" value="Search"> 
               </div> 
                 
               </form>
-        <!-- <div class = "Dropdown">
-            <button class="choiceBut">Green</button>
-            <button class="choiceBut">Child/Dog Friendly</button>
-            <button class="dropbtn">S</button>
-            <div class="dropdown-content">
-            <button class="choiceBut">Green</button>
-            <button class="choiceBut">Blue</button>
-        </div> -->
+
+
+
+              <table>
+                <thead>
+                   <th>Id</th>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+                   <th>Age</th>
+                   <th>#</th>
+                </thead>
+                {% for data in profile %}
+                <tbody>
+                   <td>{{data.Name}}</td>
+                   <td>{{data.Price}}</td>
+                   <td>{{data.Active}}</td>
+                   <td>Vocal: {{data.Vocal}}</td>
+                </tbody>
+                {% endfor%}
+             </table>
             
         </div>
       </div>

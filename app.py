@@ -28,10 +28,26 @@ class Breed (db.Model):
     Size = db.Column(db.String(20), nullable=True)
     Activity = db.Column(db.Integer, nullable=True)
     Hair_length = db.Column(db.String(20), nullable=True)
+    Hair_length = db.Column(db.String(20), nullable=True)
 
 @app.route('/add')
 def add_data():
     return render_template('Add_Breed.html')
+
+@app.route('/', methods=["POST"])
+def profile():
+    # This function will take the inputed user data
+    social = request.form.get("social")
+    price = request.form.get("price")
+    size = request.form.get("size")
+    active = request.form.get("active")
+
+    data = {'social':social,'price' :price, 'size': size, 'active':active}
+    data = Breed.query.filter_by(Size = data["size"], Activity = data["active"]).all()
+    # data = Breed.query.all()
+    print(data , " reslt")
+    return render_template('index.html', profile = data)
+    # return redirect('/')
 
 @app.route('/add', methods=["POST"])
 def newprofile():
@@ -49,24 +65,5 @@ def newprofile():
         return redirect('/')
     else:
         return redirect('/')
-
-@app.route('/', methods=["POST"])
-def profile():
-    # This function will take the inputed user data
-    social = request.form.get("social")
-    price = request.form.get("price")
-    size = request.form.get("size")
-    vocal = request.form.get("vocal")
-    print(size , "  size")
-    receivedData = {'social':social,'price' :price, 'size': size, 'vocal':vocal}
-    # create an object of the Profile class of models and
-    # store data as a row in our datatable
-    # data = Cat_Breed.query.filter_by(size = receivedData["size"]).all()
-    # employees = Breed.query.filter_by(Size = "S")
-    employees = Breed.query.all()
-    print(employees , " reslt")
-    return redirect('/')
-
-
 # flask db migrate -m "Initial migration"
 # flask db upgrade
